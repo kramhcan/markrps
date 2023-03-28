@@ -7,6 +7,8 @@ import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const interB = Inter({ weight: '600', subsets: ['latin'] })
+
 export function ParallaxScroll() {
   const parallax = useRef<IParallax>(null!);
   const [isOpen, setOpen] = useState(false);
@@ -49,13 +51,7 @@ export function ParallaxScroll() {
             <div className="animation-layer parallax" id="pointed-hills-5"></div>
           </ParallaxLayer>
 
-          <ParallaxLayer offset={1} speed={0.5}>
-            <div className="animation-layer parallax">
-              <Image src="/20230220_094155.jpg" width={500} height={100} alt={'me'} />
-            </div>
-          </ParallaxLayer>
-
-          <ParallaxLayer offset={1} speed={2}>
+          <ParallaxLayer offset={1} speed={1}>
             <div
               style={{
                 display: 'flex',
@@ -64,26 +60,42 @@ export function ParallaxScroll() {
                 bottom: '25%',
                 padding: '10rem',
                 height: '50vh',
-                width: '45vw',
+                width: '70vw',
                 minWidth: '600px',
                 backgroundColor: 'white'
               }}
             >
-              <div className={inter.className} 
-              style={{
-                alignItems: 'center',
-                justifyContent: 'right',
-                height: '100vh',
-                fontSize: '4rem',
-                color: '#2C0A56',
-
-              }}
-              >
-                Its Me.
-              </div>
+                <div className={inter.className}
+                  style={{
+                    paddingBottom: '2rem',
+                    marginLeft: '17rem',
+                    fontSize: '2.5rem',
+                    color: '#2C0A56',
+                  }}
+                >
+                  Its Me.
+                </div>
+                <div className={interB.className}
+                  style={{
+                    paddingTop: '2rem',
+                    marginLeft: '2rem',
+                    fontSize: '3.5rem',
+                    color: '#2C0A56',
+                  }}
+                >
+                  Mark
+                </div>
             </div>
-            
           </ParallaxLayer>
+
+          <ParallaxLayer offset={1} speed={2}>
+            <div>
+              <Image src="" width={600} height={600} alt={'me'}
+                className='blob-bordered' />
+            </div>
+          </ParallaxLayer>
+
+
 
           {/* <ParallaxLayer offset={1} speed={1}>
               <div className={inter.className} 
