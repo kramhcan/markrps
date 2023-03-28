@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.title-text { 
+    margin: 0 auto;
+    font-size:10rem;
+}
+
+.animation,
+.animation-layer {
+    height: 800px;
+}
+
+.animation {
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+
+.animation-layer {
+    background-position: bottom center;
+    background-repeat: repeat-x;
+    background-size: auto 1038px;
+    width: 100%;
+    position: absolute;
+
+}
+
+.animation-layer.parallax {
+    position: fixed;
+}
+
+#pointed-hills-1{
+    background-image: url(../../public/layered-peaks-haikei-1.svg);
+}
+
+#pointed-hills-2{
+    background-image: url(../../public/layered-peaks-haikei-2.svg);
+}
+
+#pointed-hills-3{
+    background-image: url(../../public/layered-peaks-haikei-3.svg);
+}
+
+#pointed-hills-4{
+    background-image: url(../../public/layered-peaks-haikei-4.svg);
+}
+
+#pointed-hills-5{
+    background-image: url(../../public/layered-peaks-haikei-5.svg);
+}
+
+.background-layer-1 {
+    background: rgb(245,115,10);
+    background: linear-gradient(90deg, rgba(245,115,10,1) 0%, rgba(255,182,101,1) 18%, rgba(255,201,28,1) 100%);
+}
+
+#prof-pic {
+    background-image: url(../../public/20230220_094155.jpg);
+}
